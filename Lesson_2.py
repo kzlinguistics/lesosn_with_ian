@@ -20,6 +20,8 @@ class Solution:
         if not root:
             return False
 
+        #when there is no longer a child here, stop 
+
         ########
         #question 1- how do I know this is going to work and keep updating. there is not 
         #for loop here. Is it being driven by the last line? 
@@ -28,7 +30,8 @@ class Solution:
 
 
         ########
-        sum -= root.val #we just keep updating the sum 
+        sum -= root.val 
+        #we just keep updating the sum 
 
         #this is to look for the leaf 
         #this is an "iterative" solution. I need to stop thinking about the first pass 
@@ -44,6 +47,8 @@ class Solution:
         #smaller than the one you start the root with. 
 
         #if it does not equal. you have to keep on going. the magic of CS 
+
+        #you are making progress at every step 
         return self.hasPathSum(root.left, sum) or self.hasPathSum(root.right, sum)
 
 
